@@ -1,0 +1,42 @@
+{
+  "name": "clinifogo-website",
+  "version": "1.0.0",
+  "description": "Medical facility marketing website",
+  "keywords": [
+    "medical",
+    "clinic",
+    "website"
+  ],
+  "homepage": "https://github.com/glowes/cliniFogo#readme",
+  "bugs": {
+    "url": "https://github.com/glowes/cliniFogo/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/glowes/cliniFogo.git"
+  },
+  "license": "MIT",
+  "author": "Clovis Veiga",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "sass:build": "sass --no-source-map scss:css",
+    "sass:watch": "sass --no-source-map --watch scss:css"
+  },
+  "dependencies": {
+    "chokidar": "^5.0.0",
+    "detect-libc": "^2.1.2",
+    "immutable": "^5.1.5",
+    "is-extglob": "^2.1.1",
+    "is-glob": "^4.0.3",
+    "node-addon-api": "^7.1.1",
+    "picomatch": "^4.0.4",
+    "readdirp": "^5.0.0",
+    "source-map-js": "^1.0.2"
+  },
+  "devDependencies": {
+    "@fortawesome/fontawesome-free": "^6.4.0",
+    "bootstrap": "^5.2.3",
+    "sass": "^1.100.0"
+  }
+}
