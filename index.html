@@ -120,13 +120,14 @@
       <!-- Video Modal -->
       <div class="video-modal">
         <div id="videoModal" class="modal fade">
-          <div class="modal-dialog">
+          <div class="modal-dialog modal-xl">
             <div class="modal-content">
               <div class="ratio ratio-16x9">
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/HPmQ8TN0-gM?si=xXfPPl5SdqLHdqws" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
           </div>
         </div>
+      </div>
       </div>
     </section>
 
@@ -330,4 +331,21 @@
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/script.js"></script>
   </body>
+
+  <script>
+  const myModal = document.getElementById('videoModal');
+
+  // 2. Listen for the Bootstrap 'hidden' event
+  myModal.addEventListener('hidden.bs.modal', function () {
+    
+    const iframe = myModal.querySelector('iframe');
+  
+    if (iframe) {
+      const currentSrc = iframe.getAttribute('src');
+      iframe.setAttribute('src', '');
+      iframe.setAttribute('src', currentSrc);
+    }
+    
+  });
+</script>
 </html>
